@@ -6,3 +6,19 @@ Spring 2012
 XML Parsing: Andrew and Tianyu
 Filtering: James
 HTML Output: Donghe
+
+Part 1:
+	Parser is able to parser three different types of calendars (GoogelCal, DukeCal, .ics Cal)
+	Cannot fully parse GoogleCal jsut yet (having trouble with "Recurring Event" cases)
+	Other calendars are fully parsable
+	Code is very ugly, please don't look at it if you don't have too, we will refactor later
+
+	Filter works by filtering by keyword in title or by Dates
+	It is kind of a hassle to filter by Dates because then you have to actually set up the
+		proper Date objects
+	
+	HTML.java outputs two types of HTML files: an HTML table and HTML pages for specific events
+	The table contains the events arranged by the days of their occurrences and links to the
+		event specific HTML pages
+
+	-16 February 2012
