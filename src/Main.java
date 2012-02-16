@@ -1,3 +1,5 @@
+package working;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -6,12 +8,13 @@ import java.util.ArrayList;
 
 import org.xml.sax.SAXException;
 
+
 public class Main {
     static ArrayList<Event> eventList = new ArrayList<Event>();
 
     public static void main(String[] args) {
         parseXML();
-//        filterEventList();
+        filterEventList();
         for (Event e : eventList) {
             System.out.println("---------------------------");
             e.print();
@@ -42,7 +45,7 @@ public class Main {
         try {
             EventFilters filter = new EventFilters();
             // eventList=filter.filterByTime(eventList, startDate, endDate);
-            eventList = filter.filterByTitle(eventList, "Meet");
+            eventList = filter.filterByTitle(eventList, "Duke");
         } catch (Exception e) {
             e.printStackTrace();
         }
